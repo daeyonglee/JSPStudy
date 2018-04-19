@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS 연습</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+  <!-- Page content -->
+  <div class="w3-content">
+    <div class="w3-container" id="contact">
+      <h2>사용자 입력폼</h2>
+      <form>
+        <p>
+          <input class="w3-input w3-padding-16 w3-border" type="text"
+            placeholder="아이디" required name="id">
+        </p>
+
+        <p>
+          <input class="w3-input w3-padding-16 w3-border" type="text"
+            placeholder="이름" required name="name">
+        </p>
+
+        <p>
+          <input class="w3-input w3-padding-16 w3-border"
+            type="password" placeholder="비밀번호" required name="passwd">
+        </p>
+
+        <p>
+          <textarea class="w3-input w3-padding-16 w3-border"
+            placeholder="남기고 싶은 말" name="message"></textarea>
+        </p>
+
+        <p>
+          <input class="w3-check" type="checkbox" checked="checked">
+          <label>Milk</label> <input class="w3-check" type="checkbox">
+          <label>Sugar</label> <input class="w3-check" type="checkbox"
+            disabled> <label>Lemon (Disabled)</label>
+        </p>
+
+        <p>
+          <input class="w3-radio" type="radio" name="gender"
+            value="male" checked> <label>Male</label> <input
+            class="w3-radio" type="radio" name="gender" value="female">
+          <label>Female</label> <input class="w3-radio" type="radio"
+            name="gender" value="" disabled> <label>Don't
+            know (Disabled)</label>
+        </p>
+
+        <p>
+          <select class="w3-select w3-border" name="option">
+            <option value="" disabled selected>Choose your
+              option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </p>
+
+        <p>
+          <button class="w3-button w3-red w3-padding-large"
+            type="submit">등록</button>
+          <button class="w3-button w3-blue w3-padding-large"
+            type="reset">취소</button>
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+    <p>
+      Powered by <a href="http://edu.kosta.or.kr" target="_blank"
+        class="w3-hover-text-green">bangry.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>

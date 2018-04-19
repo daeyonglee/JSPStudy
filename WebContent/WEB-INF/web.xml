@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JSPStudy</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>aaa</param-name>
+  	<param-value>bbb</param-value>
+  </context-param>
+  <!-- Servlet Filter 등록 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>kr.or.kosta.servlet.common.web.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  <servlet>
+    <servlet-name>configExample</servlet-name>
+    <jsp-file>/configExample.jsp</jsp-file>
+    <init-param>
+      <param-name>test</param-name>
+      <param-value>config테스트</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>configExample</servlet-name>
+    <url-pattern>/config.action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeController</display-name>
+    <servlet-name>EmployeeController</servlet-name>
+    <servlet-class>kr.or.kosta.servlet.emp.controller.EmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeController</servlet-name>
+    <url-pattern>/empRegist</url-pattern>
+  </servlet-mapping>
+</web-app>
